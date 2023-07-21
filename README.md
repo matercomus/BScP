@@ -20,6 +20,7 @@ cd BScP_jupyterhub_env
 In the file tree, you will see /work directory.
 This directory is private for your user and is persistent meaning you can save your work and come back later
 
-Inside /work there is also /shared_data. This is a read-only folder that is accessible to all users and is used to share files to all users.
+Inside /work there is also /shared_data. This read-only folder is accessible to all users and is used to share files with all users.
 You can copy these files into your /work directory to save and edit.
 
+While in /shared_data, you may also clone [BScP_NBs](https://github.com/matercomus/BScP_NBs) which is a set of notebooks that demonstrates how to use jupyter notebooks and the Knowledge Engine to create solutions for Heterogeneous IoT data and IoT interoperability.
