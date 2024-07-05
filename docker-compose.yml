@@ -52,67 +52,22 @@ services:
     networks:
       - jupyterhub-network
 
+  graphdb:
+    image: ontotext/graphdb:10.7.0
+    container_name: graphdb
+    restart: always
+    volumes:
+      - "graphdb-data:/opt/graphdb/home"
+    ports:
+      - "7200:7200"
+    networks:
+      - jupyterhub-network
+
 volumes:
   jupyterhub-data:
+  graphdb-data:
+
 
 networks:
   jupyterhub-network:
     name: jupyterhub-network
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
