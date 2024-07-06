@@ -44,13 +44,16 @@ services:
       jupyterhub -f /srv/jupyterhub/jupyterhub_config.py
 
   knowledge-directory:
+    container_name: knowledge-directory
     image: ghcr.io/tno/knowledge-engine/knowledge-directory:1.2.5
+    ports:
+      - "8282:8282"
     networks:
       - jupyterhub-network
 
-  knowledge_engine:
+  knowledge-engine:
     image: ghcr.io/tno/knowledge-engine/smart-connector:1.2.5
-    container_name: knowledge_engine
+    container_name: knowledge-engine
     restart: always
     ports:
       - "8280:8280"
@@ -58,7 +61,7 @@ services:
       - jupyterhub-network
     environment:
       KE_RUNTIME_PORT: 8081
-      KE_RUNTIME_EXPOSED_URL: http://knowledge_engine:8081
+      KE_RUNTIME_EXPOSED_URL: http://knowledge-engine:8081
       KD_URL: http://knowledge-directory:8282
 
   graphdb:
