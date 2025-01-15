@@ -109,6 +109,9 @@ services:
       - "7200:7200"
     networks:
       - jupyterhub-network
+    environment:
+      graphdb.external-url: https://hedge-iot.labs.vu.nl/graphdb/
+
 
 volumes:
   jupyterhub-data:
