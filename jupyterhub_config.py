@@ -3,6 +3,7 @@
 
 # Configuration file for JupyterHub
 import os
+from dockerspawner import DockerSpawner
 
 c = get_config()
 
@@ -33,7 +34,6 @@ c.DockerSpawner.network_name = network_name
 notebook_dir = os.environ.get("DOCKER_NOTEBOOK_DIR") or "/home/jovyan/work"
 c.DockerSpawner.notebook_dir = notebook_dir
 
-from dockerspawner import DockerSpawner
 
 class MyDockerSpawner(DockerSpawner):
     def start(self, image=None, extra_create_kwargs=None, extra_host_config=None):

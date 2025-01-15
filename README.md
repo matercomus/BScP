@@ -7,12 +7,13 @@ Make sure you have Docker and Docker Compose installed.
 ```bash
 git clone https://github.com/matercomus/BScP_jupyterhub_env
 cd BScP_jupyterhub_env
-./build.sh
+export PWD=$(pwd)
+docker-compose up
 ```
 
 ## Usage
-1. In your browser go to 0.0.0.0:9999
-1. Click Sign-Up
+1. In your browser go to https://hedge-iot.labs.vu.nl/jh
+1. Click Sign-Up, create a new user...
 1. Log in
 
 ## /work directory
