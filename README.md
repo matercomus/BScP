@@ -8,6 +8,7 @@ Make sure you have Docker and Docker Compose installed.
 git clone https://github.com/matercomus/BScP_jupyterhub_env
 cd BScP_jupyterhub_env
 export PWD=$(pwd)
+DOCKER_BUILDKIT=0 docker compose build jh
 docker compose up -d
 ```
 
