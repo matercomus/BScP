@@ -65,7 +65,7 @@ services:
       # All containers will join this network
       DOCKER_NETWORK_NAME: jupyterhub-network
       # JupyterHub will spawn this Notebook image for users
-      DOCKER_NOTEBOOK_IMAGE: matercomus/jupyterlab3:2
+      DOCKER_NOTEBOOK_IMAGE: matercomus/jupyterlab3:3
       # Notebook directory inside user image
       DOCKER_NOTEBOOK_DIR: /home/jovyan/work
       # Using this run command
